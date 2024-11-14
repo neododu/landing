@@ -1,0 +1,349 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
+/* #04d7ff */
+
+/* ****************** LAYOUT ********************** */
+body,
+table,
+th,
+td,
+button,
+select,
+input,
+textarea {
+    font-family: 'Noto Sans KR', Arial, sans-serif;
+    font-size: 14px;
+    color: #2b2b2b;
+    -webkit-text-size-adjust: none;
+    word-break: keep-all;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url('../sub_img/main_bg-db2659e68922cc89d3b39411acf32a2b.jpg') no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 80px;
+}
+
+#wrap.contactWrap .content{
+    /*position:relative;*/
+}
+
+header .logo {
+    float: left;
+    position: absolute;
+;
+    top: 50px;
+    left: 60px;
+}
+
+header .logo a {
+    width: 314px;
+    height: 65px;
+    background: url('../sub_img/logo.png') no-repeat;
+    display: block;
+    text-indent: -9999em;
+}
+
+
+/*  HEADER  */
+#header {
+    position: relative;
+    height: 150px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s
+}
+
+.content {
+    width: 80%;
+    height: auto;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    color: #fff;
+}
+.contactWrap .content {margin-top:8%;}
+
+.content .left {width:50%;}
+.content .right {width:50%; margin-top:40px;}
+
+.content h1 {
+    font-size: 70px;
+    font-weight: 700;
+    color: #5edcf9;
+    margin: 0px 0 25px 0;
+}
+
+.content h4 {
+    margin: 35px 0 10px;
+    font-size:25px;
+    font-weight: 600;
+    letter-spacing: -.5px;
+    color:#5edcf9;
+}
+
+.content p {
+    font-size: 16px;
+    font-weight: 300;
+}
+.content h5 {
+    margin: 45px 0 10px;
+    font-weight: 600;
+    letter-spacing: -.5px;
+    font-size:22px;
+}
+.content .con_time {margin-top:150px;}
+
+
+/* =============================  form  ============================*/
+table.type1 {padding:10px 0; width:100%;}
+table.type1 th,
+table.type1 td {height:45px; padding:3px 0;  font-size:15px; color:#fff;}
+table.type1 .error-alert {text-align:left; font-size:12px; color:#f71d1d !important; display:block;}
+table.type1 th {padding:0; text-align: left; font-weight:normal; font-size: 16px; font-weight:bold; color:#5edcf9;
+}
+table.type1 th span {background:url(images/star.jpg) no-repeat; display:inline-block;  margin:0 2px 0 -18px; width:15px; height:15px; color:transparent; overflow: hidden;}
+table.type1 td {padding:4px; font-size:14px;text-align: left;}
+table.type1 td select {padding:0 40px 0 10px; height:30px; font-size:16px; color:#777; border:1px solid #ccc; line-height:30px; box-sizing:border-box; background:url(../images/select.jpg) no-repeat right; -webkit-appearance:none;}
+table.type1 td select::ms-expand {display:none;}
+table.type1 td select,
+table.type1 td input[type="text"],
+table.type1 td input[type="tel"],
+table.type1 td input[type="email"],
+table.type1 td input[type="password"],
+table.type1 td input[type="number"] { height:37px; line-height:37px; padding-left:10px; background:rgba(256,256,256,0.9); border-radius:2px; font-size:15px;}
+table.type1 td textarea { background:rgba(256,256,256,0.9); padding: 5px 20px; padding-left:10px; color: #000;}
+table.type1 td.chk {font-weight:300; line-height:1.6em; padding-top:10px;}
+table.type1 td.chk label {margin-right:15px;}
+
+form a {color:#cacaca; padding-left:10px;}
+form a:hover {text-decoration: underline;}
+form button.send {padding:12px 60px; border-radius:2px; background:#2482fd; color:#fff; border:none; font-size:16px; transition:.3s; cursor:pointer;}
+form button.send:hover {background:#04d7ff; color:#fff;}
+form i.required-star {margin-right: 0.2rem; color: #ffff00;}
+
+.contact_add {margin-top:5px; border-top:1px solid #fff;}
+.error-alert {font-size:12px; color:#f71d1d !important; display:block;}
+ul.privacy-policy-agree-info {
+    height: 60px;
+    margin: 10px 0;
+    padding: 1rem;
+    overflow-y: scroll;
+    background-color: #1212126b;
+    border-width: 1px;
+    border-color: #fbfbfb;
+    border-radius: 2px;
+    font-family: 'NG R' !important;
+    line-height: 1.5rem;
+    color: #b0b3bd;
+}
+ul.privacy-policy-agree-info li {
+    width: auto;
+}
+ul.privacy-policy-agree-info li strong {
+    color: #e90011;
+}
+
+
+/* =====================================반응형 미디어쿼리======================================== */
+
+
+@media screen and (max-width: 1450px) {
+
+    #wrap {
+        padding-bottom: 350px;
+    }
+    .content {
+        width: 94%;
+        height: auto;
+        position: absolute;
+        top: 15%;
+        left: 6%;
+        color: #fff;
+    }
+
+    .content h1 {
+        font-size: 90px;
+        font-weight: 700;
+        margin: 45px 0 30px 0;
+    }
+
+    .content h4 {
+        margin: 5px 0 5px;
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    ul.privacy-policy-agree-info {
+        margin: 10px 0;
+    }
+
+    ul.privacy-policy-agree-info li {
+        width: auto;
+    }
+    .content h1 {
+        font-size: 50px;
+    }
+    .content h4 {
+        font-size:20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #wrap {
+        padding-bottom: 350px;
+    }
+    #header {
+        height:80px;
+    }
+    header .logo a {
+        width: 200px;
+        height: 45px;
+        background: url('../sub_img/m_logo.png') no-repeat;
+        display: block;
+        text-indent: -9999em;
+    }
+    .content ul li {width:50%; margin-bottom:40px;}
+
+
+    header .logo {
+        float: left;
+        position: absolute;
+        top: 33px;
+        left: 30px;
+    }
+
+    .content .left, .content .right {width:96%; padding-bottom:20px;}
+    .content .right {margin-top:20px;}
+
+    ul.privacy-policy-agree-info {
+        margin: 10px 0;
+    }
+    ul.privacy-policy-agree-info li {
+        width: auto;
+        margin-bottom: 0;
+    }
+    .contactWrap .content {margin-top:0%;}
+    .content h1 {
+        font-size: 50px;
+        margin:30px 0 10px 0;
+    }
+
+}
+
+@media screen and (max-width: 820px) {
+    #wrap {
+        padding-bottom: 350px;
+    }
+    .content ul li a>img {
+        margin-right: 5px;
+        margin-bottom: -30px;
+        width: 30px;
+    }
+
+    .content ul li a>p {
+        font-size: 12px;
+    }
+
+    .content ul li:nth-child(1) a>p {
+        margin-left: 38px;
+    }
+
+    .content ul li:nth-child(2) a>p {
+        margin-left: 38px;
+    }
+
+    .content ul li:nth-child(3) a>p {
+        margin-left: 38px;
+    }
+
+    .content ul li:nth-child(4) a>p {
+        margin-left: 38px;
+    }
+
+    table.type1 th {font-size:14px;}
+
+}
+
+
+@media screen and (max-width: 480px) {
+    #wrap {
+        padding-bottom: 350px;
+    }
+
+    header .logo {
+        float: left;
+        position: absolute;
+        top: 20px;
+        left: 25px;
+    }
+
+    header .logo a {
+        /* width: 230px;
+        height: 45px; */
+        background: url('../sub_img/m_logo.png') no-repeat;
+        display: block;
+        text-indent: -9999em;
+    }
+
+    .content {
+        width: 94%;
+        height: auto;
+        position: absolute;
+        /*top: 12%;*/
+        left: 6%;
+        color: #fff;
+    }
+
+
+    .content h1 {
+        font-size: 30px;
+        font-weight: 700;
+        color: #64cbe3;
+    }
+
+    .content h4 {
+        margin: 15px 0 10px;
+        font-size: 15px;
+    }
+
+    .content p {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 16px;
+        letter-spacing: -0.3px;
+    }
+
+    table.type1 {width:100%;}
+    input[type=text], input[type=password], input[type=email], input[type=tel] {padding:2px 10px;}
+    table.type1 td {padding:2px;}
+    table.type1 th, table.type1 td {font-size:12px;}
+    table.type1 td textarea {padding: 2px 10px;}
+    table.type1 td.chk label {display:inline-block; vertical-align:top; margin-right:0px; font-size:13px;}
+
+    ul.privacy-policy-agree-info {
+        margin: 10px 0;
+    }
+    ul.privacy-policy-agree-info li {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+}
